@@ -9,7 +9,7 @@ function Header() {
       Bookstore CMS
       </h1>
       <nav className="mein-links">
-        <Link className="meinLink" to="/">Home</Link>
+        <Link className="meinLink" to="/">Bookstore CMS</Link>
         <Link className="meinLink" to="/Books">Books</Link>
         <Link className="meinLink" to="/Categories">Categories</Link>
       </nav>

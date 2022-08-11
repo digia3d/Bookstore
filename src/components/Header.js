@@ -6,10 +6,9 @@ function Header() {
   return (
     <header className="header">
       <h1>
-      Bookstore CMS
+        Bookstore CMS
       </h1>
       <nav className="mein-links">
-        <Link className="meinLink" to="/">Bookstore CMS</Link>
         <Link className="meinLink" to="/Books">Books</Link>
         <Link className="meinLink" to="/Categories">Categories</Link>
       </nav>

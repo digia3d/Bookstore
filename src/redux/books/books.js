@@ -19,9 +19,11 @@ export function removeBook(books) {
   };
 }
 
-export default function reducer(state = initialState, action) {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
-      default: return state.books;
+    default: return state.books;
   }
 }
+
+export default reducer;

@@ -6,15 +6,15 @@ function checkStatus() {
   return {
     type: CHECK_STATUS,
   };
-};
+}
 
-function bookStat(state = initialCategoryState) {
+function bookStat(state = initialCategoryState, action) {
   switch (action.type) {
     case CHECK_STATUS:
       return 'UNDER_CONSTRUCTION';
-      default: return state;
-  };
-};
+    default: return state;
+  }
+}
 
-export {checkStatus};
+export { checkStatus };
 export default bookStat;

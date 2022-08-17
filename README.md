@@ -25,7 +25,11 @@ To get a local copy of this project, follow these simple steps:
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/digia3d/Bookstore/issues).
+
+## Acknowledgments
+
+Hat tip to anyone whose code was used
 
 ## Show your support
 

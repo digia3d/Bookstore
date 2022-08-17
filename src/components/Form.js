@@ -25,7 +25,7 @@ export default function Form() {
       <form className="form-body" onSubmit={handleSubmit}>
         <input type="text" name="autor" placeholder="Autor" onChange={(e) => setAuthor(e.target.value)} />
         <input type="text" name="book" placeholder="Book" onChange={(e) => setBook(e.target.value)} />
-        <button type="submit">Submit</button>
+        <button type="submit">Add Book</button>
       </form>
     </div>
   );

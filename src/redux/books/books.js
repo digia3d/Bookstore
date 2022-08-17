@@ -58,7 +58,7 @@ function reducer(state = initialState, action) {
       return [...state, action.payload];
 
     case REMOVE_BOOK:
-      return [state.filter((book) => book.id !== action.payload.id)];
+      return [...state.filter((book) => book.id !== action.payload.bookid)];
 
     default:
       return state;

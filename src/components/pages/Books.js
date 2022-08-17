@@ -20,6 +20,7 @@ function Books() {
                 author={e.author}
                 currentChapter={e.currentChapter}
                 category={e.category}
+                progress={e.progress}
               />
             ))
           }

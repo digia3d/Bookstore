@@ -4,7 +4,7 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [{
-  id: uuidv4,
+  id: uuidv4(),
   title: 'The Hunger Games',
   author: 'Suzanne Collins',
   category: 'Action',
@@ -12,7 +12,7 @@ const initialState = [{
   currentChapter: 17,
 },
 {
-  id: uuidv4,
+  id: uuidv4(),
   title: 'Dune',
   author: 'Frank Herbert',
   category: 'Science Fiction',
@@ -20,7 +20,7 @@ const initialState = [{
   currentChapter: 3,
 },
 {
-  id: uuidv4,
+  id: uuidv4(),
   title: 'Capital in the Twenty-First century',
   author: 'Suzanne Collins',
   category: 'Economy',
@@ -33,7 +33,7 @@ export function addBook(newBook) {
   return {
     type: ADD_BOOK,
     payload: {
-      id: uuidv4,
+      id: uuidv4(),
       title: newBook.title,
       author: newBook.author,
       category: newBook.category,

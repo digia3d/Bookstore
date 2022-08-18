@@ -1,33 +1,12 @@
+/* eslint-disable camelcase */
+import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/alms293dJxSdOD0eklKU/books';
 
-const initialState = [{
-  id: uuidv4(),
-  title: 'The Hunger Games',
-  author: 'Suzanne Collins',
-  category: 'Action',
-  progress: 64,
-  currentChapter: 17,
-},
-{
-  id: uuidv4(),
-  title: 'Dune',
-  author: 'Frank Herbert',
-  category: 'Science Fiction',
-  progress: 8,
-  currentChapter: 3,
-},
-{
-  id: uuidv4(),
-  title: 'Capital in the Twenty-First century',
-  author: 'Suzanne Collins',
-  category: 'Economy',
-  progress: 0,
-  currentChapter: 'introduction',
-},
-];
+const initialState = [];
 
 export function addBook(newBook) {
   return {
@@ -43,14 +22,22 @@ export function addBook(newBook) {
   };
 }
 
-export function removeBook(id) {
+export function removeBook(item_id) {
   return {
     type: REMOVE_BOOK,
     payload: {
-      bookid: id,
+      bookid: item_id,
     },
   };
 }
+
+const fetchBook = () => async (dispatch) => {
+  await axios.getBook(API_URL).then((response) => dispatch(addBook(response.data)));
+};
+
+const postBook = (addBook) => async (dispatch) => {
+  await axios.post(API_URL, addBook).then(() => dispatch(fetchBook()));
+};
 
 function reducer(state = initialState, action) {
   switch (action.type) {

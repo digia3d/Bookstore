@@ -5,22 +5,22 @@ import Form from '../Form';
 import Book from '../Book';
 
 function Books() {
-  const data = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books);
   return (
     <>
       <h2>Books</h2>
       <section className="container">
         <div className="data">
           {
-            data.map((e) => (
+            books.map((book) => (
               <Book
-                key={e.id}
-                id={e.id}
-                title={e.title}
-                author={e.author}
-                currentChapter={e.currentChapter}
-                category={e.category}
-                progress={e.progress}
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                author={book.author}
+                currentChapter="Chapter 15"
+                category="action"
+                progress={17}
               />
             ))
           }

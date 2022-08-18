@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -8,21 +7,14 @@ const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 
 const initialState = [];
 
-export function addBook(newBook) {
+function addBook(newBook) {
   return {
     type: ADD_BOOK,
-    payload: {
-      id: uuidv4(),
-      title: newBook.title,
-      author: newBook.author,
-      category: newBook.category,
-      progress: 0,
-      currentChapter: 0,
-    },
+    payload: newBook,
   };
 }
 
-export function removeBook(item_id) {
+function removeBook(item_id) {
   return {
     type: REMOVE_BOOK,
     payload: {
@@ -39,17 +31,33 @@ const postBook = (addBook) => async (dispatch) => {
   await axios.post(API_URL, addBook).then(() => dispatch(fetchBook()));
 };
 
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case ADD_BOOK:
-      return [...state, action.payload];
+const deleteBook = (id) => async (dispatch) => {
+  await axios.delete(API_URL, { params: { id } }).then(() => dispatch(fetchBook()));
+};
 
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK: {
+      const books = Object.entries(action.payload);
+      return books.map((book) => ({
+        ...book[1][0],
+        id: book[0],
+      }));
+    }
     case REMOVE_BOOK:
       return [...state.filter((book) => book.id !== action.payload.bookid)];
 
     default:
       return state;
   }
-}
+};
 
 export default reducer;
+
+export {
+  fetchBook,
+  postBook,
+  deleteBook,
+  addBook,
+  removeBook,
+};

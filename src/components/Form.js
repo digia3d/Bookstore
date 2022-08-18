@@ -1,24 +1,29 @@
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 export default function Form() {
+  const itemId = uuidv4();
   const dispatch = useDispatch();
   const [bookBook, setBook] = useState('');
   const [bookAuthor, setAuthor] = useState('');
+  const [bookCategory, setCategory] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (bookBook === '' || bookAuthor === '') return;
+    if (!bookBook.trim() || !bookAuthor.trim()) return;
     const newBook = {
+      item_Id: itemId,
       title: bookBook,
       author: bookAuthor,
+      category: bookCategory,
     };
 
     dispatch(addBook(newBook));
     setBook('');
     setAuthor('');
+    setCategory('');
   };
   return (
     <div>

@@ -4,21 +4,21 @@
   padding: 0;
 }
 
-header {
+#root {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 2rem 2rem 3rem 3rem;
-}
-
-.mein-links {
-  display: flex;
-  gap: 3rem;
+  flex-direction: column;
+  height: 89.625rem;
+  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
 }
 
 .container {
   display: flex;
-  gap: 8rem;
-  background-color: aquamarine;
-  padding: 2rem;
+  flex-direction: column;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
 }

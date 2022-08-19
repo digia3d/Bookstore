@@ -3,13 +3,14 @@ import { useSelector } from 'react-redux';
 
 import Form from '../Form';
 import Book from '../Book';
+import Header from '../Header';
 
 function Books() {
   const books = useSelector((state) => state.books);
   return (
     <>
-      <h2>Books</h2>
       <section className="container">
+        <Header />
         <div className="data">
           {
             books.map((book) => (

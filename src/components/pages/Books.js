@@ -8,8 +8,7 @@ function Books() {
   const books = useSelector((state) => state.books);
   return (
     <>
-      <h2>Books</h2>
-      <section className="container">
+      <section className="mein-container">
         <div className="data">
           {
             books.map((book) => (
@@ -19,7 +18,7 @@ function Books() {
                 title={book.title}
                 author={book.author}
                 currentChapter="Chapter 15"
-                category="action"
+                category="Action"
                 progress={17}
               />
             ))

@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10%;
+  padding: 2rem 4%;
   position: relative;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -129,8 +129,8 @@ ul {
 .last-container {
   display: flex;
   flex-direction: column;
-  padding-right: 3rem;
   width: 25%;
+  padding-right: 3rem;
 }
 
 .category {
@@ -160,13 +160,17 @@ h2 {
 }
 
 .chapter {
-  margin-top: 0.438rem;
-  font-size: 1rem;
-  letter-spacing: 0.4px;
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  color: #121212;
+  width: 7.875rem;
+  height: 1.125rem;
   opacity: 0.5;
+  font-family: 'RobotoSlab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .ulbutton {
@@ -215,6 +219,7 @@ h2 {
 .form-group {
   margin-bottom: 1.5rem;
   margin-left: 3.25rem;
+  padding-top: 1rem;
 }
 
 .form-body {
@@ -256,7 +261,7 @@ input {
 
 .submit {
   cursor: pointer;
-  width: 22.5%;
+  width: 22.8%;
   padding: 12px;
   border-radius: 3px;
   background-color: #0290ff;
@@ -282,11 +287,16 @@ input {
 }
 
 h4 {
-  margin-top: 0.438rem;
+  width: 4.688rem;
+  height: 1.313rem;
+  font-family: 'RobotoSlab', serif;
   font-size: 1rem;
-  letter-spacing: 0.4px;
-  font-family: "Roboto Slab", serif;
   font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
 }
 
 .circular-progress-container {

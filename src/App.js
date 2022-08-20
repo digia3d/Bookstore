@@ -14,7 +14,6 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Books />} />
-          <Route exact path="Books" element={<Books />} />
           <Route path="Categories" element={<Categories />} />
         </Routes>
       </Router>

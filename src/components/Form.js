@@ -26,11 +26,12 @@ export default function Form() {
     setCategory('');
   };
   return (
-    <div>
+    <div className="form-group">
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form className="form-body" onSubmit={handleSubmit}>
         <input type="text" name="autor" placeholder="Autor" onChange={(e) => setAuthor(e.target.value)} />
         <input type="text" name="book" placeholder="Book" onChange={(e) => setBook(e.target.value)} />
-        <button type="submit">Add Book</button>
+        <button className="submit" type="submit">ADD BOOK</button>
       </form>
     </div>
   );

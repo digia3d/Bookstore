@@ -5,7 +5,18 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/alms293dJxSdOD0eklKU/books';
 
-const initialState = [];
+const initialState = [
+  {
+    item_id: 'mock-1',
+    category: 'Action',
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+    progress: {
+      currentChapter: 'Chapter 17',
+      completed: '64',
+    },
+  },
+];
 let newBookID = 0;
 
 function addBook({ title, author }) {

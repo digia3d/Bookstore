@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bookstore/static/css/main.94b7d9ac.css",
+    "main.js": "/Bookstore/static/js/main.dc50ccf6.js",
+    "index.html": "/Bookstore/index.html",
+    "main.94b7d9ac.css.map": "/Bookstore/static/css/main.94b7d9ac.css.map",
+    "main.dc50ccf6.js.map": "/Bookstore/static/js/main.dc50ccf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94b7d9ac.css",
+    "static/js/main.dc50ccf6.js"
+  ]
+}
